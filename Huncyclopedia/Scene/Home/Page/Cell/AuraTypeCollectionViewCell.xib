@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AuraTypeCollectionViewCell" customModule="Huncyclopedia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2rE-ty-KJd">
+                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="強" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRt-KF-SD8" customClass="CircleLabel" customModule="Huncyclopedia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mRt-KF-SD8" firstAttribute="top" secondItem="2rE-ty-KJd" secondAttribute="top" id="2Z8-lq-Nox"/>
+                            <constraint firstAttribute="trailing" secondItem="mRt-KF-SD8" secondAttribute="trailing" id="48y-6Z-VA7"/>
+                            <constraint firstItem="mRt-KF-SD8" firstAttribute="leading" secondItem="2rE-ty-KJd" secondAttribute="leading" id="hn5-lG-q6I"/>
+                            <constraint firstAttribute="bottom" secondItem="mRt-KF-SD8" secondAttribute="bottom" id="mgc-f2-ex3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="2rE-ty-KJd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="FGf-fo-7cy"/>
+                <constraint firstItem="2rE-ty-KJd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IIy-eC-n4d"/>
+                <constraint firstAttribute="bottom" secondItem="2rE-ty-KJd" secondAttribute="bottom" id="fj7-83-2dt"/>
+                <constraint firstAttribute="trailing" secondItem="2rE-ty-KJd" secondAttribute="trailing" id="iPz-Vx-Fgg"/>
+            </constraints>
+            <size key="customSize" width="71" height="69"/>
+            <connections>
+                <outlet property="auraLabel" destination="mRt-KF-SD8" id="YBi-pf-BJW"/>
+            </connections>
+            <point key="canvasLocation" x="2.1739130434782612" y="98.102678571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

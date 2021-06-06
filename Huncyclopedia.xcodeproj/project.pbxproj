@@ -66,6 +66,19 @@
 		6197D4F92666B47B00701B00 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D4F82666B47B00701B00 /* HomeViewController.swift */; };
 		6197D4FE2666B49200701B00 /* SafariCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D4FD2666B49200701B00 /* SafariCoordinator.swift */; };
 		6197D5092666BB0B00701B00 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D5082666BB0B00701B00 /* AppCoordinator.swift */; };
+		6197D5132667BA4700701B00 /* Hunter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D5122667BA4700701B00 /* Hunter.swift */; };
+		6197D51E2667BBE000701B00 /* AuraType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D51D2667BBE000701B00 /* AuraType.swift */; };
+		6197D5242667C05300701B00 /* HuncyclopediaUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D5232667C05300701B00 /* HuncyclopediaUsecase.swift */; };
+		6197D52C2667D54F00701B00 /* HunterDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D52B2667D54F00701B00 /* HunterDatasource.swift */; };
+		6197D531266BC94D00701B00 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6197D530266BC94D00701B00 /* HomeViewModel.swift */; };
+		61EB340E266BD910008A929F /* HunterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB340C266BD910008A929F /* HunterCollectionViewCell.swift */; };
+		61EB340F266BD910008A929F /* HunterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61EB340D266BD910008A929F /* HunterCollectionViewCell.xib */; };
+		61EB3415266BD923008A929F /* AuraTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB3413266BD923008A929F /* AuraTypeCollectionViewCell.swift */; };
+		61EB3416266BD923008A929F /* AuraTypeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61EB3414266BD923008A929F /* AuraTypeCollectionViewCell.xib */; };
+		61EB341D266BDBB1008A929F /* TitleHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB341B266BDBB1008A929F /* TitleHeaderCollectionReusableView.swift */; };
+		61EB341E266BDBB1008A929F /* TitleHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61EB341C266BDBB1008A929F /* TitleHeaderCollectionReusableView.xib */; };
+		61EB3426266BDCF2008A929F /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB3425266BDCF2008A929F /* HomeSection.swift */; };
+		61EB342B266BDE31008A929F /* HomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EB342A266BDE31008A929F /* HomeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +164,19 @@
 		6197D4F82666B47B00701B00 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		6197D4FD2666B49200701B00 /* SafariCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariCoordinator.swift; sourceTree = "<group>"; };
 		6197D5082666BB0B00701B00 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		6197D5122667BA4700701B00 /* Hunter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hunter.swift; sourceTree = "<group>"; };
+		6197D51D2667BBE000701B00 /* AuraType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuraType.swift; sourceTree = "<group>"; };
+		6197D5232667C05300701B00 /* HuncyclopediaUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuncyclopediaUsecase.swift; sourceTree = "<group>"; };
+		6197D52B2667D54F00701B00 /* HunterDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HunterDatasource.swift; sourceTree = "<group>"; };
+		6197D530266BC94D00701B00 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		61EB340C266BD910008A929F /* HunterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HunterCollectionViewCell.swift; sourceTree = "<group>"; };
+		61EB340D266BD910008A929F /* HunterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HunterCollectionViewCell.xib; sourceTree = "<group>"; };
+		61EB3413266BD923008A929F /* AuraTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuraTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		61EB3414266BD923008A929F /* AuraTypeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuraTypeCollectionViewCell.xib; sourceTree = "<group>"; };
+		61EB341B266BDBB1008A929F /* TitleHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		61EB341C266BDBB1008A929F /* TitleHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		61EB3425266BDCF2008A929F /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
+		61EB342A266BDE31008A929F /* HomeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,9 +227,9 @@
 		6197D3D1266692CA00701B00 /* Huncyclopedia */ = {
 			isa = PBXGroup;
 			children = (
-				6197D447266698D100701B00 /* Entity */,
-				6197D40A266693E200701B00 /* Extension */,
 				6197D409266693DC00701B00 /* Core */,
+				6197D447266698D100701B00 /* Entity */,
+				6197D5222667C02000701B00 /* Usecase */,
 				6197D408266693D400701B00 /* Scene */,
 				6197D3D2266692CA00701B00 /* AppDelegate.swift */,
 				6197D3D4266692CA00701B00 /* SceneDelegate.swift */,
@@ -246,6 +272,7 @@
 		6197D409266693DC00701B00 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				6197D40A266693E200701B00 /* Extension */,
 				6197D4A626669C6900701B00 /* Environment */,
 				6197D49326669A6300701B00 /* Component */,
 				6197D4492666995000701B00 /* Util */,
@@ -284,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				6197D4B92666AB3500701B00 /* APIError */,
+				6197D5122667BA4700701B00 /* Hunter.swift */,
+				6197D51D2667BBE000701B00 /* AuraType.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -492,7 +521,12 @@
 		6197D4D92666B31100701B00 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				61EB341A266BDB92008A929F /* Header */,
+				61EB340B266BD8EA008A929F /* Cell */,
 				6197D4F82666B47B00701B00 /* HomeViewController.swift */,
+				6197D530266BC94D00701B00 /* HomeViewModel.swift */,
+				61EB3425266BDCF2008A929F /* HomeSection.swift */,
+				61EB342A266BDE31008A929F /* HomeItem.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -527,6 +561,35 @@
 				6197D4E42666B43900701B00 /* SplashCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6197D5222667C02000701B00 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				6197D5232667C05300701B00 /* HuncyclopediaUsecase.swift */,
+				6197D52B2667D54F00701B00 /* HunterDatasource.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		61EB340B266BD8EA008A929F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				61EB340C266BD910008A929F /* HunterCollectionViewCell.swift */,
+				61EB340D266BD910008A929F /* HunterCollectionViewCell.xib */,
+				61EB3413266BD923008A929F /* AuraTypeCollectionViewCell.swift */,
+				61EB3414266BD923008A929F /* AuraTypeCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		61EB341A266BDB92008A929F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				61EB341B266BDBB1008A929F /* TitleHeaderCollectionReusableView.swift */,
+				61EB341C266BDBB1008A929F /* TitleHeaderCollectionReusableView.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -632,7 +695,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61EB3416266BD923008A929F /* AuraTypeCollectionViewCell.xib in Resources */,
+				61EB340F266BD910008A929F /* HunterCollectionViewCell.xib in Resources */,
 				6197D47B266699AF00701B00 /* LoadingCollectionCell.xib in Resources */,
+				61EB341E266BDBB1008A929F /* TitleHeaderCollectionReusableView.xib in Resources */,
 				6197D4DB2666B32B00701B00 /* Home.storyboard in Resources */,
 				6197D3DF266692CE00701B00 /* LaunchScreen.storyboard in Resources */,
 				6197D3DC266692CE00701B00 /* Assets.xcassets in Resources */,
@@ -665,6 +731,7 @@
 				6197D42E2666981A00701B00 /* BaseViewController.swift in Sources */,
 				6197D4312666981A00701B00 /* RoutableProtocol.swift in Sources */,
 				6197D4692666997900701B00 /* UIViewController+ActionSheet.swift in Sources */,
+				6197D51E2667BBE000701B00 /* AuraType.swift in Sources */,
 				6197D4582666996D00701B00 /* UIColor+Hex.swift in Sources */,
 				6197D483266699CB00701B00 /* XibView.swift in Sources */,
 				6197D4C82666ADB800701B00 /* Subscribers+Event.swift in Sources */,
@@ -675,21 +742,26 @@
 				6197D4CA2666ADB800701B00 /* Combine+Lock.swift in Sources */,
 				6197D4592666996D00701B00 /* UIStackView+Util.swift in Sources */,
 				6197D47C266699AF00701B00 /* LoadingItem.swift in Sources */,
+				61EB342B266BDE31008A929F /* HomeItem.swift in Sources */,
 				6197D4C92666ADB800701B00 /* Combine+Never.swift in Sources */,
 				6197D49F26669AE800701B00 /* AppConfigurator.swift in Sources */,
 				6197D4292666981A00701B00 /* NavigationController.swift in Sources */,
 				6197D48A266699F900701B00 /* StoryboardLoadable.swift in Sources */,
+				6197D531266BC94D00701B00 /* HomeViewModel.swift in Sources */,
 				6197D4B426669C8700701B00 /* NSRegularExpression+Util.swift in Sources */,
 				6197D4B526669C8700701B00 /* FileManager.swift in Sources */,
 				6197D4F92666B47B00701B00 /* HomeViewController.swift in Sources */,
 				6197D4EA2666B44100701B00 /* SplashViewController.swift in Sources */,
+				61EB340E266BD910008A929F /* HunterCollectionViewCell.swift in Sources */,
 				6197D4672666997900701B00 /* UIViewController+Share.swift in Sources */,
 				6197D45B2666996D00701B00 /* UIView+IB.swift in Sources */,
 				6197D4282666981A00701B00 /* RouterProtocol.swift in Sources */,
+				6197D52C2667D54F00701B00 /* HunterDatasource.swift in Sources */,
 				6197D4662666997900701B00 /* UIViewController+Alert.swift in Sources */,
 				6197D48F26669A2800701B00 /* ViewModel.swift in Sources */,
 				6197D45A2666996D00701B00 /* NSDirectionalEdgeInsets+Util.swift in Sources */,
 				6197D5092666BB0B00701B00 /* AppCoordinator.swift in Sources */,
+				6197D5132667BA4700701B00 /* Hunter.swift in Sources */,
 				6197D3D3266692CA00701B00 /* AppDelegate.swift in Sources */,
 				6197D4CF2666AE5600701B00 /* Combine+Util.swift in Sources */,
 				6197D47D266699AF00701B00 /* LoadingCollectionCell.swift in Sources */,
@@ -699,11 +771,15 @@
 				6197D4A826669C6A00701B00 /* Environment.swift in Sources */,
 				6197D4E52666B43900701B00 /* SplashCoordinator.swift in Sources */,
 				6197D4B226669C8700701B00 /* String+Height.swift in Sources */,
+				6197D5242667C05300701B00 /* HuncyclopediaUsecase.swift in Sources */,
 				6197D46F2666999500701B00 /* Array+Utils.swift in Sources */,
+				61EB3426266BDCF2008A929F /* HomeSection.swift in Sources */,
 				6197D47A266699AF00701B00 /* SectionLayoutProvider.swift in Sources */,
 				6197D4C62666ADB800701B00 /* TakeUntil.swift in Sources */,
+				61EB341D266BDBB1008A929F /* TitleHeaderCollectionReusableView.swift in Sources */,
 				6197D44B2666995E00701B00 /* Reusable.swift in Sources */,
 				6197D49826669A7300701B00 /* CircleImageView.swift in Sources */,
+				61EB3415266BD923008A929F /* AuraTypeCollectionViewCell.swift in Sources */,
 				6197D4B326669C8700701B00 /* String+Attributed.swift in Sources */,
 				6197D42F2666981A00701B00 /* Coordinator.swift in Sources */,
 				6197D4302666981A00701B00 /* ReleaseHandler.swift in Sources */,

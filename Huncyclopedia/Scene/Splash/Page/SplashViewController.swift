@@ -35,7 +35,7 @@ final class SplashViewController: BaseViewController {
     // do some work and publish an event
     private func nextPage() -> AnyPublisher<Bool, Never> {
         Just(true)
-            .delay(for: .seconds(1), scheduler: RunLoop.main)
+            .delay(for: .seconds(2), scheduler: RunLoop.main)
             .eraseToAnyPublisher()
     }
 }

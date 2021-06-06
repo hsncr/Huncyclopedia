@@ -32,6 +32,15 @@ public extension Publisher {
                             event(.value(v))
                          })
     }
+    
+    func subscribeOutput<S>(_ subject: S) -> AnyCancellable where S : Subject, Self.Failure == S.Failure, Self.Output == S.Output {
+        return sink { _ in
+            //
+        } receiveValue: { value in
+            subject.send(value)
+        }
+
+    }
 }
 
 extension Subscribers.Event: Equatable where Value: Equatable, Failure: Equatable {

@@ -60,6 +60,14 @@ extension UICollectionView {
         register(UINib(nibName: T.reuseID, bundle: Bundle(for: type)), forCellWithReuseIdentifier: T.reuseID)
     }
     
+    final func register<T: UICollectionReusableView>(for type: T.Type, ofKind elementKind: String) {
+          self.register(
+            UINib(nibName: T.reuseID, bundle: Bundle(for: type)),
+            forSupplementaryViewOfKind: elementKind,
+            withReuseIdentifier: type.reuseID
+          )
+      }
+    
 }
 
 // MARK: - Table View

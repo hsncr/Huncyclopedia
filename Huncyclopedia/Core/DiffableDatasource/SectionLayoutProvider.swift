@@ -12,3 +12,9 @@ public protocol SectionLayoutProvider {
     func layout(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection?
     
 }
+
+//public protocol SectionSupplementaryViewProvider {
+//    func supplementaryView(in collection: UICollectionView,
+//                           kind: String,
+//                           at indexPath: IndexPath) -> UICollectionReusableView?
+//}

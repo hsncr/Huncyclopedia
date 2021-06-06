@@ -22,6 +22,8 @@ public enum SectionHolder<S: Sectionable>: Hashable {
 
 final public class DiffableDatasource<S: Sectionable, I: Hashable>: UICollectionViewDiffableDataSource<SectionHolder<S>, ItemHolder<I>> {
     
+    public typealias SectionSupplementaryViewProvider = (UICollectionView, String, IndexPath, S) -> UICollectionReusableView?
+    
     private let scheduler: SchedulerContext
     
     private let retryIntent: PassthroughSubject<LoadingItem, Never>
@@ -32,7 +34,8 @@ final public class DiffableDatasource<S: Sectionable, I: Hashable>: UICollection
     
     public convenience init(collectionView: UICollectionView,
                             scheduler: SchedulerContext,
-                            itemCellProvider: @escaping UICollectionViewDiffableDataSource<S, I>.CellProvider) {
+                            itemCellProvider: @escaping UICollectionViewDiffableDataSource<S, I>.CellProvider,
+                            supplementaryViewProvider: @escaping SectionSupplementaryViewProvider) {
         let retryIntent = PassthroughSubject<LoadingItem, Never>()
         
         self.init(collectionView: collectionView,
@@ -48,18 +51,34 @@ final public class DiffableDatasource<S: Sectionable, I: Hashable>: UICollection
                     case .items(let item):
                         return itemCellProvider(collectionView, indexPath, item)
                     }
-                  })
+                  },
+                  supplementaryViewProvider: supplementaryViewProvider)
     }
     
     init(collectionView: UICollectionView,
          scheduler: SchedulerContext,
          retryIntent: PassthroughSubject<LoadingItem, Never>,
-         cellProvider: @escaping UICollectionViewDiffableDataSource<SectionHolder<S>, ItemHolder<I>>.CellProvider) {
+         cellProvider: @escaping UICollectionViewDiffableDataSource<SectionHolder<S>, ItemHolder<I>>.CellProvider,
+         supplementaryViewProvider: @escaping SectionSupplementaryViewProvider) {
         
         self.retryIntent = retryIntent
         self.scheduler = scheduler
         
+        collectionView.registerCell(for: LoadingCollectionCell.self)
+        
         super.init(collectionView: collectionView, cellProvider: cellProvider)
+        
+        self.supplementaryViewProvider = { [unowned self] (collectionView, kind, indexPath) -> UICollectionReusableView? in
+            
+            let section = self.snapshot().sectionIdentifiers[indexPath.section]
+            
+            switch section {
+            case .loading:
+                return nil
+            case .sections(let s):
+                return supplementaryViewProvider(collectionView, kind, indexPath, s)
+            }
+        }
         
         collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(sectionProvider: sectionLayout)
         
@@ -116,13 +135,26 @@ final public class DiffableDatasource<S: Sectionable, I: Hashable>: UICollection
         return true
     }
     
-    
     @discardableResult
     public func loadingFailed() -> Bool {
         configureLoadingSection(state: .failed)
     }
     
-    // MARK: UICollectionViewCompositionalLayout + SectionProvider
+    public func item(at indexPath: IndexPath) -> I? {
+        let item = itemIdentifier(for: indexPath)
+        switch item {
+        case .items(let i):
+            return i
+        default:
+            return nil
+        }
+        
+    }
+}
+
+// MARK: UICollectionViewCompositionalLayout + SectionProvider
+
+extension DiffableDatasource {
     
     func sectionLayout(for sectionIndex: Int,
                        environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
@@ -130,24 +162,9 @@ final public class DiffableDatasource<S: Sectionable, I: Hashable>: UICollection
         
         switch section {
         case .loading: // full screen loading cell
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                  heightDimension: .fractionalHeight(1.0))
-            
-            let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-            
-            let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: itemSize,
-                                                               subitems: [layoutItem])
-            
-            layoutGroup.contentInsets = NSDirectionalEdgeInsets(horizontal: 10,
-                                                                vertical: 10)
-            
-            let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-            layoutSection.interGroupSpacing = 10
-            
-            return layoutSection
+            return LoadingCollectionCell.loadingSectionLayout
         case .sections(let section):
             return section.layout(environment: environment)
         }
     }
-    
 }
